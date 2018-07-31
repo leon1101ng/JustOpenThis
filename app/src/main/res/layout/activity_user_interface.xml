@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_layout"
+    tools:context=".UserInterface.UserInterface">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/User_profile"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.252" />
+
+    <LinearLayout
+        android:id="@+id/LLout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="213dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FOLLOWERS"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="FOLLOWINGS"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/No_Followers"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="200k"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/No_Following"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="20k"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/drawer_layout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="246dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:id="@+id/relativel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/imagepost_border">
+
+
+            <TextView
+                android:id="@+id/textAge"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/vlineborder"
+                android:gravity="center"
+                android:text="Age" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/textAge"
+                android:gravity="left"
+                android:text="Name" />
+
+
+            <TextView
+                android:id="@+id/UserAge"
+                android:layout_width="100dp"
+                android:layout_height="73dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textAge"
+                android:background="@drawable/verticlelineborder"
+                android:fontFamily="serif-monospace"
+                android:gravity="center"
+                android:text="29"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/UserRealName"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textAge"
+                android:layout_marginEnd="1dp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Jessica Jung Soo Jung"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/relativel"
+            android:background="@drawable/imagepost_border">
+
+            <TextView
+                android:id="@+id/Emailtext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="Email"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Emailt"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@+id/Emailtext"
+                android:fontFamily="monospace"
+                android:text="LEON1101NG@GMAIL.COM"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/userprofile_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/LLout1"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/profile_nav" />
+
+
+</RelativeLayout>
